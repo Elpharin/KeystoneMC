@@ -150,6 +150,27 @@ On Windows:
 ```powershell
 .\gradlew.bat test
 .\gradlew.bat :keystone-cli:installDist
+.\keystone-cli\build\install\keystone\bin\keystone.bat --help
+```
+
+If Gradle fails with only `25.0.3`, your user-level Gradle config is forcing JDK 25. Remove or update this line in `%USERPROFILE%\.gradle\gradle.properties`:
+
+```properties
+org.gradle.java.home=C:/Users/creep/.jdks/jdk-25.0.3+9
+```
+
+Keystone requires Java 21 today. On this machine, the working JDK is:
+
+```powershell
+$env:JAVA_HOME = "C:\Program Files\Microsoft\jdk-21.0.7.6-hotspot"
+$env:GRADLE_USER_HOME = Join-Path $env:TEMP "keystone-gradle-user-home"
+.\gradlew.bat -p examples\hello-keystone-mod build --no-daemon
+```
+
+If `keystone` starts Node.js, Windows is finding an old npm package shim first. Use the generated launcher directly:
+
+```powershell
+.\keystone-cli\build\install\keystone\bin\keystone.bat validate
 ```
 
 ## Current Status

@@ -16,5 +16,6 @@ dependencies {
 }
 
 application {
+    applicationName = "keystone"
     mainClass.set("dev.keystonemc.cli.KeystoneCli")
 }
