@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "hello_keystone",
+  "version": "${version}",
+  "name": "Hello Keystone",
+  "description": "A tiny Fabric mod used to demonstrate Keystone validation, profiling, reporting, and release checks.",
+  "authors": [
+    "KeystoneMC"
+  ],
+  "license": "GPL-3.0-or-later",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.keystonemc.examples.hellomod.HelloKeystoneMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": ">=1.21"
+  }
+}
