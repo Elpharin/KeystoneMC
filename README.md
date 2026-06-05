@@ -172,9 +172,8 @@ If `keystone` starts Node.js, Windows is finding an old npm package shim first. 
 ```powershell
 .\keystone-cli\build\install\keystone\bin\keystone.bat validate
 ```
+## Contributions
 
-## Current Status
-
-Keystone is early, but the foundation is real: the CLI, module boundaries, validation flow, Gradle runner, plugin API, tests, wrapper, docs, and initial commands are in place.
+Contributions are welcome! RN, I dont have any guidlines for em, but this place will be updated in the future
 
 The next phase is deeper Minecraft-specific intelligence: richer metadata parsing, compatibility policy files, benchmark history, report aggregation, GitHub Actions examples, and loader-aware release checks.
